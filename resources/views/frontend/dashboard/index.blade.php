@@ -37,7 +37,7 @@
                                             @foreach ($notification->data as $item)
                                                 <div class="content">
                                                     <span class="time">{{ $notification->created_at->diffForHumans() }}</span>
-                                                    <p class="text">{{ @translate($item) }}</p>
+                                                    <p class="text">{{ translate($item) }}</p>
                                                 </div>
                                             @endforeach
                                         </div><!-- end mess__item -->

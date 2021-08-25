@@ -94,14 +94,6 @@
     <section class="about-section padding-top-30px">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading text-center">
-                        <h5 class="section__meta"></h5>
-                        <h2 class="section__title section-title">@translate(know more about) <span>@translate(大和　- YAMATO -)</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-4">
                     <div class="about-content-left">
                         @php

@@ -417,7 +417,7 @@
                                                                                                                                         <span
                                                                                                                                             class="star-rating-wrap">
                                                                                                                                  @translate(Enrolled) <span
-                                                                                                                                                class="star__count">{{\App\Model\Enrollment::where('course_id',$item->id)->count()}}</span>
+                                                                                                                                                class="star__count"></span>
                                                                                                                             </span>
                                             </div><!-- end rating-wrap -->
                                             <ul class="list-items mb-3 font-size-14">
@@ -636,7 +636,7 @@
                                                                                                                                         <span
                                                                                                                                             class="star-rating-wrap">
                                                                                                                                  @translate(Enrolled) <span
-                                                                                                                                                class="star__count">{{\App\Model\Enrollment::where('course_id',$item->id)->count()}}</span>
+                                                                                                                                                class="star__count"></span>
                                                                                                                             </span>
                                                                     </div><!-- end rating-wrap -->
                                                                     <ul class="list-items mb-3 font-size-14">

@@ -77,8 +77,11 @@
                                                     <div class="card">
                                                         <div class="card-body">
                                                             <h5 class="card-title"> {{ formatPrice($subscription->subscription_price) }}/{{ $subscription->subscription_package }}</h5>
-                                                            <h6 class="card-subtitle mb-2 text-muted">{{ App\SubscriptionCourse::where('subscription_duration','LIKE','%'.$subscription->subscription_package.'%')
-                                                                    ->where('subscription_id', $subscription->subscription_id)->count() }} Courses</h6>
+                                                            @php
+                                                                $subscriptionCourse = App\SubscriptionCourse::where('subscription_duration','LIKE','%'.$subscription->subscription_package.'%')
+                                                                    ->where('subscription_id', $subscription->subscription_id)->first();
+                                                            @endphp
+                                                            <h6 class="card-subtitle mb-2 text-muted">{{ App\Model\Course::where('id', $subscriptionCourse->course_id)->first()->title }}</h6>
 
                                                     @if ($subscription->subscription_package == 'Free')
                                                         <a href="{{ route('my.subscription.package.course', $subscription->subscription_package) }}" class="card-link btn btn-success">@translate(View Course)</a>
